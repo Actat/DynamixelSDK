@@ -99,7 +99,7 @@ ReadWriteNode::ReadWriteNode()
       } else if (dxl_error != 0) {
         RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getRxPacketError(dxl_error));
       } else {
-        RCLCPP_INFO(this->get_logger(), "Set [ID: %d] [Goal Position: %d]", msg->id, msg->position);
+        // RCLCPP_INFO(this->get_logger(), "Set [ID: %d] [Goal Position: %d]", msg->id, msg->position);
       }
     }
     );
@@ -119,12 +119,14 @@ ReadWriteNode::ReadWriteNode()
         &dxl_error
       );
 
+      /*
       RCLCPP_INFO(
         this->get_logger(),
         "Get [ID: %d] [Present Position: %d]",
         request->id,
         present_position
       );
+      */
 
       response->position = present_position;
     };
