@@ -42,7 +42,7 @@
 // Control table address for X series (except XL-320)
 #define ADDR_OPERATING_MODE 11
 #define ADDR_TORQUE_ENABLE 64
-#define ADDR_GOAL_POSITION 116
+#define ADDR_GOAL_POSITION 104
 #define ADDR_PRESENT_POSITION 132
 
 // Protocol version
@@ -145,7 +145,7 @@ void setupDynamixel(uint8_t dxl_id)
     portHandler,
     dxl_id,
     ADDR_OPERATING_MODE,
-    3,
+    1,
     &dxl_error
   );
 
